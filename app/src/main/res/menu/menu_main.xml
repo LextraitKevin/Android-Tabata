@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.kevin.tabata.MainActivity">
+    <item
+        android:orderInCategory="100"
+        android:title="Charger une activité"
+        app:showAsAction="never"
+        android:checkable="false"
+        android:onClick="load"
+        android:id="@+id/load_activity" />
+</menu>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.kevin.tabata.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:text="Nom de ma séance :"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nomSeance"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/chrono"
+        android:layout_marginTop="17dp"
+        android:layout_below="@+id/nomSeance"
+        android:layout_centerHorizontal="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/chrono">
+
+        <TextView
+            android:text="Etat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/state"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            tools:textSize="36sp"
+            android:textSize="36sp" />
+
+        <Button
+            android:text="Reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:id="@+id/Reset_btn"
+            android:onClick="Reset"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:text="START"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/startButton"
+            android:onClick="startTimer"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/pauseButton"
+            android:layout_toEndOf="@+id/pauseButton"
+            android:layout_marginLeft="68dp"
+            android:layout_marginStart="68dp" />
+
+        <Button
+            android:text="PAUSE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pauseButton"
+            android:onClick="pauseTimer"
+            android:layout_toRightOf="@+id/Reset_btn"
+            android:layout_toEndOf="@+id/Reset_btn"
+            android:layout_marginLeft="117dp"
+            android:layout_marginStart="117dp"
+            android:layout_alignTop="@+id/startButton" />
+
+        <TextView
+            android:text="Cycles :"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cycle"
+
+
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/Reset_btn"
+            android:layout_toEndOf="@+id/Reset_btn" />
+
+        <TextView
+            android:text="Répétitions :"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/repetitions"
+
+            android:layout_alignBaseline="@+id/cycle"
+            android:layout_alignBottom="@+id/cycle"
+            android:layout_toRightOf="@+id/pauseButton"
+            android:layout_toEndOf="@+id/pauseButton" />
+    </RelativeLayout>
+
+</RelativeLayout>
